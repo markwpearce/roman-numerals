@@ -4,43 +4,31 @@ A modern, modular JavaScript project for converting integers into Roman numerals
 
 ## Features
 
-*   **Modern JavaScript:** Built with ES6+ syntax and modular design.
-*   **Data-Driven:** Easily configurable mapping for numeral conversion.
-*   **Large Number Support:** Uses Unicode combining overlines (`\u0305`) to represent higher magnitudes (e.g., thousands, millions).
-*   **Dual-Environment:** Compatible with Node.js (via CommonJS) and modern browsers (via ES Modules).
-*   **Self-Contained Demo:** Includes a responsive `demo.html` for real-time conversion in the browser.
+- **Modern JavaScript:** Built with ES6+ syntax and modular design.
+- **Data-Driven:** Easily configurable mapping for numeral conversion.
+- **Large Number Support:** Uses Unicode combining overlines (`\u0305`) to represent higher magnitudes (e.g., thousands, millions).
+- **Dual-Environment:** Compatible with Node.js (via CommonJS) and modern browsers (via ES Modules).
+- **Self-Contained Demo:** Includes a responsive `demo.html` for real-time conversion in the browser.
 
 ## Examples
 
 The converter handles both standard Roman numerals and large values:
 
 | Integer | Roman Numeral |
-| :--- | :--- |
-| 1 | I |
-| 4 | IV |
-| 9 | IX |
-| 40 | XL |
-| 99 | XCIX |
-| 500 | D |
-| 65,535 | L̅X̅V̅DXXXV |
-
-## Project Structure
-
-```text
-roman-numerals/
-├── demo.html             # Browser-based demo interface
-├── package.json          # Project configuration and dependencies
-├── src/
-│   ├── roman-numerals.js       # Core conversion logic
-│   └── roman-numerals.spec.js  # Mocha-based test suite
-└── node_modules/         # Installed dependencies
-```
+| :------ | :------------ |
+| 1       | I             |
+| 4       | IV            |
+| 9       | IX            |
+| 40      | XL            |
+| 99      | XCIX          |
+| 500     | D             |
+| 65,535  | L̅X̅V̅DXXXV      |
 
 ## Getting Started
 
 ### Prerequisites
 
-*   [Node.js](https://nodejs.org/) installed on your machine.
+- [Node.js](https://nodejs.org/) installed on your machine.
 
 ### Installation
 
@@ -67,6 +55,18 @@ To run the browser demo without CORS issues, serve the project using the include
    npm run demo
    ```
 2. Open your browser and navigate to: `http://localhost:3000/demo.html`
+
+## Project Structure
+
+```text
+roman-numerals/
+├── demo.html             # Browser-based demo interface
+├── package.json          # Project configuration and dependencies
+├── src/
+│   ├── roman-numerals.js       # Core conversion logic
+│   └── roman-numerals.spec.js  # Mocha-based test suite
+└── node_modules/         # Installed dependencies
+```
 
 ## License
 
