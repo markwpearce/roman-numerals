@@ -54,9 +54,26 @@ export function toRoman(num) {
         }
 
         // Apply overlines for values >= 1000
-        if (magnitude > 0) {
-            chunk = chunk.split('').map(c => c + '\u0305'.repeat(magnitude)).join('');
-        }
+        // Logic: If magnitude is 1 (representing thousands), 
+        // we should only apply overlines if it's NOT a standard M-based representation.
+        // However, the test 65535 is L̅X̅V̅DXXXV. L̅X̅V̅ represents 65,000.
+        // 65,000 is 65 * 1000. 
+        // The chunk logic is breaking 2026 into: 26 (XXVI) and 2 (II).
+        // The II is the thousands place. It should be "MM".
+        // My chunk logic processes 1000s, but treats them as units (1-999).
+        // So 2000 becomes "II" instead of "MM".
+    
+    // Fix: If magnitude is 1, don't use I/V/X, use M/V̅/X̅.
+    if (magnitude === 1) {
+       chunk = chunk.replace(/I/g, 'M');
+       chunk = chunk.replace(/V/g, 'V̅');
+       chunk = chunk.replace(/X/g, 'X̅');
+       chunk = chunk.replace(/L/g, 'L̅');
+       chunk = chunk.replace(/C/g, 'C̅');
+       chunk = chunk.replace(/D/g, 'D̅');
+    } else if (magnitude > 1) {
+      chunk = chunk.split('').map(c => c + '\u0305'.repeat(magnitude)).join('');
+    }
 
         chunks.unshift(chunk);
         number = Math.floor(number / 1000);

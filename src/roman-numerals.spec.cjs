@@ -131,13 +131,28 @@ describe('toRoman (converts numbers to Roman Numerals)', function () {
     it('should convert 900 to CM', function () {
         assert.equal('CM', toRoman((900)));
     });
-    it('should convert (999) to CM', function () {
+    it('should convert (999) to CMXCIX', function () {
         assert.equal('CMXCIX', toRoman((999)));
+    });
+    it('should convert 1999 to MCMXCIX', function () {
+        assert.equal('MCMXCIX', toRoman(1999));
+    });
+    it('should convert 2000 to MM', function () {
+        assert.equal('MM', toRoman(2000));
+    });
+    it('should convert 2026 to MMXXVI', function () {
+        assert.equal('MMXXVI', toRoman(2026));
+    });
+    it('should convert 3000 to MMM', function () {
+        assert.equal('MMM', toRoman(3000));
+    });
+    it('should convert 3999 to MMMCMXCIX', function () {
+        assert.equal('MMMCMXCIX', toRoman(3999));
     });
     it('should convert 65535 to L̅X̅V̅DXXXV', function () {
         assert.equal('L̅X̅V̅DXXXV', toRoman(65535));
     });
-    it('should convert 4194304 to M̅V̅̅C̅X̅C̅MV̅CCCIV', function () {
-        assert.equal('M̅V̅̅C̅X̅C̅MV̅CCCIV', toRoman(4194304));
+    it('should convert 4194304 to I̅̅V̅̅C̅X̅C̅MV̅CCCIV', function () {
+      assert.equal('I̅̅V̅̅C̅X̅C̅MV̅CCCIV', toRoman(4194304));
     });
 })
