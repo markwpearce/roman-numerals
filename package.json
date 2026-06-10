@@ -1,7 +1,7 @@
 {
   "name": "roman-numerals",
   "version": "1.0.0",
-  "description": "A modern, modular Roman numeral converter.",
+  "description": "A Roman numeral converter, with support for large numbers.",
   "type": "module",
   "main": "./src/roman-numerals.js",
   "exports": {
