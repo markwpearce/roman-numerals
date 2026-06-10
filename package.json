@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha src/roman-numerals-test.js"
+    "test": "mocha src/roman-numerals-test.js",
+    "demo": "npx serve -l 3000 && open http://localhost:3000/demo.html"
   },
   "keywords": [],
   "author": "",

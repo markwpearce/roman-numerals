@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roman Numerals Demo</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    #numerals { padding-top: 30px; font-size: 1.5rem; font-weight: bold; }
+  </style>
+</head>
+<body>
+  <h1>Roman Numeral Converter</h1>
+  <label for="number-input">Convert to Roman Numeral:</label>
+  <input id="number-input" type="number" placeholder="Enter a number">
+  
+  <div id="numerals"></div>
+
+  <script type="module">
+    import { toRoman } from './src/roman-numerals.js';
+
+    const input = document.getElementById('number-input');
+    const output = document.getElementById('numerals');
+
+    input.addEventListener('input', (e) => {
+      const val = parseInt(e.target.value, 10);
+      output.textContent = isNaN(val) ? '' : toRoman(val);
+    });
+  </script>
+</body>
+</html>
