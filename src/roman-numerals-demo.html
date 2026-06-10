@@ -1,0 +1,21 @@
+<html>
+<head>
+  <title>Roman Numerals Demo</title>
+  <script type="text/javascript" src="roman-numerals.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript">
+  convert = {toRoman:toRoman};
+  </script>
+</head>
+<body>
+  Convert to Roman Numeral:
+  <input
+    onchange="$('#numerals').html(convert.toRoman(this.value))"
+    type="number">
+  <div
+    style="padding-top: 30px;"
+    id="numerals">
+  </div>
+</body>
+</html>
