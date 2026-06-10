@@ -64,7 +64,7 @@ roman-numerals/
 ├── package.json          # Project configuration and dependencies
 ├── src/
 │   ├── roman-numerals.js       # Core conversion logic
-│   └── roman-numerals.spec.js  # Mocha-based test suite
+│   └── roman-numerals.spec.cjs  # Mocha-based test suite
 └── node_modules/         # Installed dependencies
 ```
 

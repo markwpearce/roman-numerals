@@ -1,16 +1,24 @@
 {
   "name": "roman-numerals",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "mocha src/roman-numerals-test.js",
-    "demo": "npx serve -l 3000 && open http://localhost:3000/demo.html"
+  "description": "A modern, modular Roman numeral converter.",
+  "type": "module",
+  "main": "./src/roman-numerals.js",
+  "exports": {
+    ".": "./src/roman-numerals.js"
   },
-  "keywords": [],
+  "scripts": {
+    "test": "mocha src/roman-numerals.spec.cjs",
+    "demo": "npx serve -l 3000"
+  },
+  "keywords": [
+    "roman",
+    "numerals",
+    "converter"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^11.7.6"
+    "mocha": "^11.3.0"
   }
 }
